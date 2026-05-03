@@ -15,16 +15,16 @@ if os.path.exists(bin_path): os.add_dll_directory(bin_path)
 
 import lumapi
 
-size = 32                                                         # size of the network
-num_layer = 4                                                    # number of the layers
+size = 40                                                         # size of the network
+num_layer = 5                                                    # number of the layers
 
 x_span = 400e-6                                                  # pixel size: 400 um (400e-6*200 = 0.08)
 y_span = 400e-6
 z = 3e-2                                                         # distance of propagation(the distance bewteen two layers)
 dist = 1e-2                                                      # the distance bewteen the last layer and the detector plane
 
-height_map = np.load('height_map.npy')                         # load height_map
-filter_height_map = np.load('filter_height_map.npy')
+height_map = np.load(r'C:\Users\etk02\Desktop\optical_race\d2nn_example\Diffractive-Deep-Neural-Networks\new_d2nn\height_map.npy')                         # load height_map
+filter_height_map = np.load(r'C:\Users\etk02\Desktop\optical_race\d2nn_example\Diffractive-Deep-Neural-Networks\new_d2nn\filter_height_map.npy')
 
 hide = True                                                      # hide the GUI will dramatically cut down the construction time
 
