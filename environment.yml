@@ -1,0 +1,10 @@
+# 可選：若已安裝 Miniconda/Anaconda
+#   conda env create -f environment.yml
+#   conda activate d2nn-tutuna
+#   pip install -r requirements-official.txt
+name: d2nn-tutuna
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
