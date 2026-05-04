@@ -8,3 +8,6 @@ additional reference links:
 
 - [Simulating Diffraction Patterns with the Angular Spectrum Method and Python](https://rafael-fuente.github.io/simulating-diffraction-patterns-with-the-angular-spectrum-method-and-python.html)
 
+![result](result.png)
+
+![result]()
