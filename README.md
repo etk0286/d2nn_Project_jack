@@ -8,6 +8,13 @@ additional reference links:
 
 - [Simulating Diffraction Patterns with the Angular Spectrum Method and Python](https://rafael-fuente.github.io/simulating-diffraction-patterns-with-the-angular-spectrum-method-and-python.html)
 
+
+
+paramater: 
+  size=40*40
+  pixel=400um*400um
+  hiddle_layer=5
+  epochs=8
 ![result](result.png)
 
-![result]()
+![result](https://github.com/etk0286/d2nn_Project_jack/blob/main/Side_by_Side_Propagation.gif)
