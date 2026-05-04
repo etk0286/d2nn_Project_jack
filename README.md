@@ -12,8 +12,11 @@ additional reference links:
 
 paramater: 
   size=40*40
+  
   pixel=400um*400um
+  
   hiddle_layer=5
+  
   epochs=8
 ![result](result.png)
 
