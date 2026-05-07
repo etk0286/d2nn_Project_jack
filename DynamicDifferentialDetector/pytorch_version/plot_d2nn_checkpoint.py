@@ -157,8 +157,31 @@ def main():
     for key in list(state_dict.keys())[:20]:
         print(f'  {key}: {tuple(state_dict[key].shape)}')
 
+    # Calculate overall statistics
+    print('\n=== Dataset Statistics ===')
+    total_samples = len(test_dataset)
+    print(f'總共測試照片數量: {total_samples}')
+
+    print('計算預測統計...')
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for images, labels in test_loader:
+            images = images.to(DEVICE)
+            labels = labels.to(DEVICE)
+            logits = model(images)
+            preds = torch.argmax(logits, dim=1)
+            correct += torch.sum(preds == labels).item()
+            total += labels.size(0)
+
+    accuracy = correct / total
+    misclassified_count = total - correct
+    print(f'正確預測數量: {correct}')
+    print(f'辨識錯誤數量: {misclassified_count}')
+    print(f'整體準確率: {accuracy:.4f} ({correct}/{total})')
+
     # Find misclassified samples
-    print('Finding misclassified samples...')
+    print('\nFinding misclassified samples...')
     misclassified_indices, misclassified_labels, misclassified_preds = find_misclassified_samples(
         model, test_loader, DEVICE, max_samples=100
     )
